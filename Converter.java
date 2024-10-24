@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        System.out.println("App for measures converting.");
         Scanner scanner = new Scanner(System.in);
         System.out.println("Вага в кг:");
         double kilograms = scanner.nextDouble();
