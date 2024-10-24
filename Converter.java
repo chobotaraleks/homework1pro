@@ -1,26 +1,25 @@
 package app;
 
-import java.util.Scanner;
-
 public class Main {
+
+    private static final double CONV_K = 2.20462;
+
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Вага в кг:");
-        double kilograms = scanner.nextDouble();
-        double pounds = kilogramsToPounds(kilograms);
-        System.out.println(kilograms + " кг = " + pounds + " фунтов.");
+        System.out.println("Converter App.");
 
-        System.out.println("Вага в фунтах:");
-        double lbs = scanner.nextDouble();
-        double kg = poundsToKilograms(lbs);
-        System.out.println(lbs + " фунтов = " + kg + " кг.");
+        double kgs = 5;
+        double pnds = 12;
+        double pounds = convKgsToPounds(kgs);
+        double kilos = convPoundsToKgs(pnds);
+        System.out.println("Result is " + pounds + " pounds and " + kilos + " kgs.");
     }
 
-    public static double kilogramsToPounds(double kg) {
-        return kg * 2.20462;
+    private static double convKgsToPounds(double kgs) {
+        return kgs * CONV_K;
     }
 
-    public static double poundsToKilograms(double lbs) {
-        return lbs / 2.20462;
+    private static double convPoundsToKgs(double pnds) {
+        return pnds / CONV_K;
     }
 }
+
